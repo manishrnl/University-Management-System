@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.university_management_system.Login_Controller">
+   <children>
+      <GridPane hgap="10.0" layoutX="128.0" layoutY="133.0" maxWidth="743.0" prefHeight="165.0" prefWidth="578.0" vgap="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.9999771118164" minWidth="10.0" prefWidth="109.40005950927736" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="406.39994049072266" minWidth="10.0" prefWidth="406.39994049072266" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="99.59998168945313" minHeight="10.0" prefHeight="50.59998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="160.4" minHeight="10.0" prefHeight="105.00001220703126" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Username:" />
+            <TextField fx:id="usernameField" prefHeight="39.0" prefWidth="406.0" promptText="Enter your userName" text="anjali.teacher" GridPane.columnIndex="1" />
+            <Label text="Password:" GridPane.rowIndex="1" />
+            <PasswordField fx:id="passwordField" prefHeight="41.0" prefWidth="406.0" promptText="Enter your password" text="hashedpassword2_anjali" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="268.0" layoutY="61.0" text="MANISH'S University" textFill="#333333">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="375.0" layoutY="370.0" text="Not Registered Yet ? " textFill="#333333">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="566.0" layoutY="366.0" onAction="#handleSignupButton" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;" text="Signup" />
+      <Hyperlink layoutX="418.0" layoutY="311.0" onAction="#handleForgotPassword" prefHeight="26.0" prefWidth="128.0" text="Forgot Password?" textFill="#007bff" />
+      <Button layoutX="566.0" layoutY="308.0" onAction="#handleLoginButton" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;" text="Login" />
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="37.0" layoutY="444.0" prefHeight="63.0" prefWidth="735.0" wrapText="true" />
+   </children>
+</AnchorPane>

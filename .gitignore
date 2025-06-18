@@ -1,0 +1,66 @@
+from docx import Document
+from docx.shared import Pt
+from fpdf import FPDF
+
+# Create a Word document
+doc = Document()
+doc.add_heading('Schrödinger Wave Equation for a Particle in a One-Dimensional Box', 0)
+
+content = """
+Problem Setup:
+Consider a particle of mass m confined in a one-dimensional box of length L, extending from x = 0 to x = L.
+The potential energy V(x) is defined as:
+V(x) = { 0, for 0 < x < L
+        ∞, otherwise }
+
+Time-Independent Schrödinger Equation:
+Inside the box (where V(x) = 0), the time-independent Schrödinger equation is:
+- (ħ² / 2m) * d²ψ(x)/dx² = Eψ(x)
+
+Rewriting:
+d²ψ(x)/dx² + (2mE / ħ²)ψ(x) = 0
+Let k² = 2mE / ħ²
+Then:
+d²ψ(x)/dx² + k²ψ(x) = 0
+
+General Solution:
+ψ(x) = A sin(kx) + B cos(kx)
+
+Applying Boundary Conditions:
+ψ(0) = 0 ⇒ B = 0
+ψ(L) = 0 ⇒ sin(kL) = 0 ⇒ kL = nπ, where n = 1, 2, 3, ...
+Thus, k = nπ / L
+
+Wavefunctions:
+ψₙ(x) = A sin(nπx / L)
+Normalize the wavefunction:
+∫₀ᴸ |ψₙ(x)|² dx = 1 ⇒ A = √(2/L)
+ψₙ(x) = √(2/L) sin(nπx / L)
+
+Energy Levels:
+Eₙ = (ħ²k²) / (2m) = (n²π²ħ²) / (2mL²), where n = 1, 2, 3, ...
+
+Final Results:
+Wavefunctions: ψₙ(x) = √(2/L) sin(nπx / L)
+Energy Levels: Eₙ = (n²π²ħ²) / (2mL²)
+"""
+
+# Add content to the Word document
+for line in content.strip().split('\n'):
+    para = doc.add_paragraph(line.strip())
+    para.paragraph_format.space_after = Pt(6)
+
+# Save as .docx
+doc.save("Schrodinger_Equation_1D_Box.docx")
+
+# Create a PDF
+pdf = FPDF()
+pdf.set_auto_page_break(auto=True, margin=15)
+pdf.add_page()
+pdf.set_font("Arial", size=12)
+
+for line in content.strip().split('\n'):
+    pdf.multi_cell(0, 10, line.strip())
+
+# Save as .pdf
+pdf.output("Schrodinger_Equation_1D_Box.pdf")

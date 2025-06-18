@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToWidth="true" prefHeight="844.0" prefWidth="991.0"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.university_management_system.Signup_Controller">
+    <content>
+        <VBox alignment="TOP_CENTER" prefWidth="780.0" spacing="15.0"
+              style="-fx-background-color: #f0f2f5;">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+            <children>
+                <Label text="New User Registration" textFill="#333333">
+                    <font>
+                        <Font name="System Bold" size="28.0"/>
+                    </font>
+
+                </Label>
+
+
+                <GridPane hgap="10.0" maxWidth="964.0" prefHeight="534.0" prefWidth="936.0"
+                          vgap="10.0" xmlns="http://javafx.com/javafx/23.0.1"
+                          xmlns:fx="http://javafx.com/fxml/1">
+                    <columnConstraints>
+                        <ColumnConstraints maxWidth="195.5999755859375"
+                                           minWidth="154.79998779296875"
+                                           prefWidth="195.5999755859375"/>
+                        <ColumnConstraints maxWidth="289.6" minWidth="186.39998779296874"
+                                           prefWidth="242.0000244140625"/>
+                        <ColumnConstraints maxWidth="348.79998779296875"
+                                           minWidth="160.79997558593743" prefWidth="192.0"/>
+                        <ColumnConstraints maxWidth="420.60003662109375"
+                                           minWidth="58.40004882812502"
+                                           prefWidth="276.79999999999995"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                        <RowConstraints prefHeight="30.0"/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="Role:" GridPane.rowIndex="0"/>
+                        <ComboBox fx:id="roleComboBox" onAction="#handleRoleSelection"
+                                  prefHeight="26.0" prefWidth="266.0" promptText="Select Role"
+                                  GridPane.columnIndex="1">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Accountant"/>
+                                    <String fx:value="Admin"/>
+                                    <String fx:value="Librarian"/>
+                                    <String fx:value="Teacher"/>
+                                    <String fx:value="Staff"/>
+                                    <String fx:value="Student"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <Label text="First Name:" GridPane.rowIndex="1"/>
+                        <TextField fx:id="firstNameField" promptText="First Name"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                        <Label text="Last Name:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="1"/>
+                        <TextField fx:id="lastNameField" promptText="Last Name"
+                                   GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                        <Label text="Father's Name:" GridPane.rowIndex="2"/>
+                        <TextField fx:id="fathersNameField" promptText="Father's Name"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                        <Label text="Mother's Name:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="2"/>
+                        <TextField fx:id="mothersNameField" promptText="Mother's Name"
+                                   GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+                        <Label text="Mobile Number:" GridPane.rowIndex="3"/>
+                        <TextField fx:id="mobileField" promptText="Mobile Number"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                        <Label text="Parents Mobile:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="3"/>
+                        <TextField fx:id="parentsMobileField"
+                                   promptText="Parents Mobile Number" GridPane.columnIndex="3"
+                                   GridPane.rowIndex="3"/>
+
+                        <Label text="Email:" GridPane.rowIndex="4"/>
+                        <TextField fx:id="emailField" promptText="Email Address"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+                        <Label text="PAN Number:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="4"/>
+                        <TextField fx:id="panField" promptText="PAN Number"
+                                   GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+
+                        <Label text="Aadhar Number:" GridPane.rowIndex="5"/>
+                        <TextField fx:id="aadharField" promptText="Aadhar Number"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+                        <Label text="Blood Group:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="5"/>
+                        <ComboBox fx:id="bloodGroupComboBox" prefHeight="26.0"
+                                  prefWidth="294.0" promptText="Select Blood Group"
+                                  GridPane.columnIndex="3" GridPane.rowIndex="5">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="A+"/>
+                                    <String fx:value="A-"/>
+                                    <String fx:value="B+"/>
+                                    <String fx:value="B-"/>
+                                    <String fx:value="O+"/>
+                                    <String fx:value="O-"/>
+                                    <String fx:value="AB+"/>
+                                    <String fx:value="AB-"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <Label text="Gender:" GridPane.rowIndex="6"/>
+                        <ComboBox fx:id="genderComboBox" prefHeight="26.0" prefWidth="260.0"
+                                  promptText="Select Gender" GridPane.columnIndex="1"
+                                  GridPane.rowIndex="6">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Male"/>
+                                    <String fx:value="Female"/>
+                                    <String fx:value="Other"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <Label text="Date of Birth:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="6"/>
+                        <DatePicker fx:id="dobPicker" prefHeight="26.0" prefWidth="310.0"
+                                    promptText="Select Date of Birth" GridPane.columnIndex="3"
+                                    GridPane.rowIndex="6"/>
+
+                        <Label text="Temporary Address:" GridPane.rowIndex="7"/>
+                        <TextArea fx:id="temporaryAddressArea"
+                                  promptText="Enter Temporary Address" GridPane.columnIndex="1"
+                                  GridPane.columnSpan="3" GridPane.rowIndex="7"/>
+
+                        <Label text="Permanent Address:" GridPane.rowIndex="8"/>
+                        <TextArea fx:id="permanentAddressArea"
+                                  promptText="Enter Permanent Address" GridPane.columnIndex="1"
+                                  GridPane.columnSpan="3" GridPane.rowIndex="8"/>
+
+                        <Label text="Nationality:" GridPane.rowIndex="9"/>
+                        <ComboBox fx:id="nationalityComboBox" prefHeight="26.0"
+                                  prefWidth="250.0" promptText="Select Nationality"
+                                  GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+
+
+                        <Label text="Marital Status:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="9"/>
+                        <ComboBox fx:id="maritalStatusComboBox" prefHeight="26.0"
+                                  prefWidth="301.0" promptText="Select Marital Status"
+                                  GridPane.columnIndex="3" GridPane.rowIndex="9">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Single"/>
+                                    <String fx:value="Married"/>
+                                    <String fx:value="Divorced"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <Label text="Emergency Contact Name:" GridPane.rowIndex="10"/>
+                        <TextField fx:id="emergencyContactNameField" promptText="Full Name"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+
+                        <Label text="Emergency Contact Number:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="10"/>
+                        <TextField fx:id="emergencyContactNumberField"
+                                   promptText="Mobile Number" GridPane.columnIndex="3"
+                                   GridPane.rowIndex="10"/>
+
+                        <Label text="Emergency Contact Relation:" GridPane.rowIndex="11"/>
+                        <ComboBox fx:id="emergencyRelationComboBox" prefHeight="26.0"
+                                  prefWidth="270.0" promptText="Select Relationship"
+                                  GridPane.columnIndex="1" GridPane.rowIndex="11">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Father"/>
+                                    <String fx:value="Mother"/>
+                                    <String fx:value="Sibling"/>
+                                    <String fx:value="Uncle"/>
+                                    <String fx:value="Close Friend"/>
+                                    <String fx:value="PG / Flat Incharge"/>
+                                    <String fx:value="Guardian"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <Label text="Referenced Via:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="11"/>
+                        <ComboBox fx:id="referencedViaComboBox" prefHeight="26.0"
+                                  prefWidth="289.0" promptText="Select Reference Source"
+                                  GridPane.columnIndex="3" GridPane.rowIndex="11">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Friend"/>
+                                    <String fx:value="Advertisement"/>
+                                    <String fx:value="Website"/>
+                                    <String fx:value="Agent Vivek"/>
+                                    <String fx:value="Agent Vaibhav"/>
+                                    <String fx:value="Agent Rahul"/>
+                                    <String fx:value="Agent Ranjan"/>
+                                    <String fx:value="Agent Parween"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <Label text="Username:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="0"/>
+                        <TextField fx:id="usernameField" prefHeight="26.0" prefWidth="171.0"
+                                   promptText="Choose a Username" GridPane.columnIndex="3"
+                                   GridPane.rowIndex="0"/>
+
+                        <Label text="Password:" GridPane.rowIndex="12"/>
+                        <PasswordField fx:id="passwordField" promptText="Choose a Password"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="12"/>
+
+                        <Label text="Confirm Password:" GridPane.columnIndex="2"
+                               GridPane.rowIndex="12"/>
+                        <PasswordField fx:id="confirmPasswordField"
+                                       promptText="Confirm Password" GridPane.columnIndex="3"
+                                       GridPane.rowIndex="12"/>
+                    </children>
+                </GridPane>
+                <Label layoutX="351.0" layoutY="30.0" text="Upload Profile Image"
+                       textFill="#333333">
+                    <font>
+                        <Font name="System Bold" size="28.0"/>
+                    </font>
+                </Label>
+
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                      VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Button mnemonicParsing="false" onMouseClicked="#UploadImage"
+                                        prefHeight="41.0" prefWidth="115.0"
+                                        text="Upload Image"/>
+                            </children>
+                        </VBox>
+                        <ImageView fx:id="profileImage" fitHeight="150.0" fitWidth="200.0"
+                                   pickOnBounds="true" preserveRatio="true"/>
+                    </children>
+                </HBox>
+
+
+                <VBox fx:id="dynamicFieldsContainer" alignment="TOP_CENTER" spacing="10.0">
+                </VBox>
+                <VBox fx:id="StudentsFields" managed="true" prefHeight="682.0"
+                      prefWidth="794.0" spacing="10.0"
+                      style="-fx-border-color: lightgray; -fx-border-radius: 5; -fx-padding: 15;"
+                      visible="true">
+
+                    <Label style="-fx-font-weight: bold;"
+                           text="Additional Student Academic Details">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                    </Label>
+
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0"
+                                               minWidth="10.0" prefWidth="120.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="250.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="136.20001831054685"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="294.5999816894531"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <children>
+
+                            <Label text="Course" GridPane.halignment="RIGHT"/>
+                            <ComboBox fx:id="courseComboBox" prefHeight="26.0"
+                                      prefWidth="293.0" promptText="Select Course"
+                                      GridPane.columnIndex="1"/>
+                            <Label text="Enrolled On:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="1"/>
+                            <DatePicker fx:id="studentEnrolledOnPicker" prefHeight="26.0"
+                                        prefWidth="406.0" promptText="YYYY-MM-DD"
+                                        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                            <Label text="Select Batch" GridPane.columnIndex="2"
+                                   GridPane.halignment="RIGHT" GridPane.rowIndex="1"/>
+                            <ComboBox fx:id="studentBatchCombo" prefHeight="26.0"
+                                      prefWidth="310.0" promptText="Select Batch"
+                                      GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                            <Label text="Select Stream" GridPane.columnIndex="2"
+                                   GridPane.halignment="RIGHT"/>
+                            <ComboBox fx:id="studentStreamCombo" layoutX="105.0"
+                                      layoutY="12.0"
+                                      prefHeight="26.0" prefWidth="326.0"
+                                      promptText="Select Stream" GridPane.columnIndex="3"/>
+
+                        </children>
+                    </GridPane>
+
+                    <Label style="-fx-font-weight: bold;" text="10th Class Details">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets top="15.0"/>
+                        </VBox.margin>
+                    </Label>
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0"
+                                               minWidth="10.0" prefWidth="120.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="250.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <children>
+                            <Label text="School Name:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="0"/>
+                            <TextField fx:id="school10NameField"
+                                       promptText="Name of 10th class school"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                            <Label text="Passing Year:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="1"/>
+                            <TextField fx:id="school10PassingYearField" promptText="e.g., 2018"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                            <Label text="Percentage:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="2"/>
+                            <TextField fx:id="school10PercentageField" promptText="e.g., 90.5"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        </children>
+                    </GridPane>
+
+                    <Label style="-fx-font-weight: bold;" text="12th Class Details">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets top="15.0"/>
+                        </VBox.margin>
+                    </Label>
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0"
+                                               minWidth="10.0" prefWidth="120.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="250.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <children>
+                            <Label text="School Name:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="0"/>
+                            <TextField fx:id="school12NameField"
+                                       promptText="Name of 12th class school/college"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                            <Label text="Passing Year:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="1"/>
+                            <TextField fx:id="school12PassingYearField" promptText="e.g., 2020"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                            <Label text="Percentage:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="2"/>
+                            <TextField fx:id="school12PercentageField" promptText="e.g., 88.0"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        </children>
+                    </GridPane>
+                </VBox>
+
+
+                <VBox fx:id="teacherFields" managed="false" spacing="10.0"
+                      style="-fx-border-color: lightgray; -fx-border-radius: 5; -fx-padding: 15;"
+                      visible="false">
+                    <Label style="-fx-font-weight: bold;" text="Additional Teachers Details"/>
+
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0"
+                                               minWidth="10.0" prefWidth="120.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="250.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <children>
+                            <Label text="Registration No.:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="0"/>
+                            <TextField fx:id="teacherRegNumberField"
+                                       promptText="Teacher Registration Number"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                            <Label text="Designation:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="1"/>
+                            <TextField fx:id="teacherDesignationField"
+                                       promptText="e.g., Professor" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="1"/>
+
+                            <Label text="Department:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="2"/>
+                            <ComboBox fx:id="teacherDepartmentComboBox"
+                                      promptText="Select Department" GridPane.columnIndex="1"
+                                      GridPane.rowIndex="2">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Computer Science &amp; Engineering"/>
+                                        <String fx:value="Electronics &amp; Communication Engg."/>
+                                        <String fx:value="Mechanical Engineering"/>
+                                        <String fx:value="Civil Engineering"/>
+                                        <String fx:value="Applied Sciences"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+
+                            <Label text="Qualification:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="3"/>
+                            <TextField fx:id="teacherQualificationField"
+                                       promptText="e.g., Ph.D. CS" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="3"/>
+
+                        </children>
+                    </GridPane>
+                </VBox>
+
+
+                <VBox fx:id="staffFields" managed="false" spacing="10.0"
+                      style="-fx-border-color: lightgray; -fx-border-radius: 5; -fx-padding: 15;"
+                      visible="false">
+                    <Label style="-fx-font-weight: bold;" text="Additional Staffs Details"/>
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0"
+                                               minWidth="10.0" prefWidth="120.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="250.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <children>
+
+                            <Label text="Designation:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="0"/>
+                            <TextField fx:id="staffDesignationField"
+                                       promptText="e.g., Admin Assistant"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                            <Label text="Department:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="1"/>
+                            <ComboBox fx:id="staffDepartmentComboBox"
+                                      promptText="Select Department" GridPane.columnIndex="1"
+                                      GridPane.rowIndex="2">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Administration"/>
+                                        <String fx:value="Human Resources"/>
+                                        <String fx:value="Security"/>
+                                        <String fx:value="Maintenance"/>
+                                        <String fx:value="IT Support"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+
+                            <Label text="Employment Type:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="3"/>
+                            <ComboBox fx:id="staffEmploymentTypeComboBox"
+                                      promptText="Select Employment Type"
+                                      GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Full-time"/>
+                                        <String fx:value="Part-time"/>
+                                        <String fx:value="Contract"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+
+                            <Label text="Work Experience (Years):" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="4"/>
+                            <TextField fx:id="staffExperienceField" promptText="e.g., 5"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        </children>
+                    </GridPane>
+                </VBox>
+
+
+                <VBox fx:id="accountantFields" managed="false" spacing="10.0"
+                      style="-fx-border-color: lightgray; -fx-border-radius: 5; -fx-padding: 15;"
+                      visible="false">
+                    <Label style="-fx-font-weight: bold;"
+                           text="Additional  Accountants Details"/>
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0"
+                                               minWidth="10.0" prefWidth="120.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="250.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <children>
+                            <Label text="Qualification:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="0"/>
+                            <TextField fx:id="accountantQualificationField"
+                                       promptText="Qualification" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="0"/>
+                            <Label text="Certification:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="1"/>
+                            <TextField fx:id="accountantCertificationField"
+                                       promptText="Certification" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="1"/>
+                            <Label text="Experience (Years):" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="2"/>
+                            <TextField fx:id="accountantExperienceField"
+                                       promptText="Experience Years" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="2"/>
+                            <Label text="Designation:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="3"/>
+                            <TextField fx:id="accountantDesignationField"
+                                       promptText="e.g., Senior Accountant"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                            <Label text="Department:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="4"/>
+                            <ComboBox fx:id="accountantDepartmentComboBox"
+                                      promptText="Select Department" GridPane.columnIndex="1"
+                                      GridPane.rowIndex="4">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Finance"/>
+                                        <String fx:value="Payroll"/>
+                                        <String fx:value="Accounts"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </children>
+                    </GridPane>
+                </VBox>
+
+
+                <VBox fx:id="librarianFields" managed="false" spacing="10.0"
+                      style="-fx-border-color: lightgray; -fx-border-radius: 5; -fx-padding: 15;"
+                      visible="false">
+                    <Label style="-fx-font-weight: bold;"
+                           text="Additional Librarians Details"/>
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0"
+                                               minWidth="10.0" prefWidth="120.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="250.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <children>
+                            <Label text="Qualification:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="0"/>
+                            <TextField fx:id="librarianQualificationField"
+                                       promptText="Qualification" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="0"/>
+                            <Label text="Certification:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="1"/>
+                            <TextField fx:id="librarianCertificationField"
+                                       promptText="Certification" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="1"/>
+                            <Label text="Experience (Years):" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="2"/>
+                            <TextField fx:id="librarianExperienceField"
+                                       promptText="Experience Years" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="2"/>
+                            <Label text="Designation:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="3"/>
+                            <TextField fx:id="librarianDesignationField"
+                                       promptText="e.g., Assistant Librarian"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                            <Label text="Department:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="4"/>
+                            <ComboBox fx:id="librarianDepartmentComboBox"
+                                      promptText="Select Department" GridPane.columnIndex="1"
+                                      GridPane.rowIndex="4">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Library"/>
+                                        <String fx:value="Digital Resources"/>
+                                        <String fx:value="Archives"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </children>
+                    </GridPane>
+                </VBox>
+
+
+                <VBox fx:id="adminFields" managed="false" spacing="10.0"
+                      style="-fx-border-color: lightgray; -fx-border-radius: 5; -fx-padding: 15;"
+                      visible="false">
+                    <Label style="-fx-font-weight: bold;" text="Additional Admins Details"/>
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0"
+                                               minWidth="10.0" prefWidth="120.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES"
+                                               maxWidth="1.7976931348623157E308"
+                                               minWidth="10.0" prefWidth="250.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <children>
+                            <Label text="Designation:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="0"/>
+                            <TextField fx:id="adminDesignationField" promptText="e.g., IT Head"
+                                       GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                            <Label text="Department (Optional):" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="1"/>
+                            <ComboBox fx:id="adminDepartmentComboBox"
+                                      promptText="Select Department (if departmental)"
+                                      GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="All"/>
+                                        <String fx:value="Administration"/>
+                                        <String fx:value="Finance"/>
+                                        <String fx:value="Academic Affairs"/>
+                                        <String fx:value="Library"/>
+                                        <String fx:value="Human Resources"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                            <Label text="Access Level:" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="2"/>
+                            <ComboBox fx:id="adminAccessLevelComboBox"
+                                      promptText="Select Access Level" GridPane.columnIndex="1"
+                                      GridPane.rowIndex="2">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Super"/>
+                                        <String fx:value="Departmental"/>
+                                        <String fx:value="Academic"/>
+                                        <String fx:value="Finance"/>
+                                        <String fx:value="Library"/>
+                                        <String fx:value="HR"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </children>
+                    </GridPane>
+                </VBox>
+
+
+
+                <Label fx:id="errorMessageLabel" alignment="CENTER" prefHeight="30.0"
+                       prefWidth="800.0" wrapText="true" textFill="RED">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Label>
+
+                <HBox alignment="CENTER" spacing="20.0">
+                    <children>
+                        <Button onAction="#handleRegisterButton" prefWidth="100.0"
+                                style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;"
+                                text="Register"/>
+                        <Button onAction="#handleCancelButton" prefWidth="100.0"
+                                style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;"
+                                text="Cancel"/>
+                    </children>
+                </HBox>
+
+            </children>
+        </VBox>
+    </content>
+</ScrollPane>
