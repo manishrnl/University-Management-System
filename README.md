@@ -20,9 +20,9 @@
 
 | Login Screen | Forget Password Screen | Change Password Screen | Admin Screen |
 |--------------|------------------------|------------------------|--------------|
-| <img src="ScreenShot/login.png"  width="250" height="200"/> | <img src="ScreenShot/forgetPassword.png"  width="250" height="200"/> | <img src="ScreenShot/changePassword.png"  width="250" height="200"/> |  <img src="ScreenShot/adminPanel.png"  width="250" height="200"/> |
+| <img src="ScreenShot/login.png"  width="250" height="200"/> | <img src="ScreenShot/forgetPassword.png"  width="250" height="200"/> | <img src="ScreenShot/changePassword.png"  width="250" height="200"/> |  <img src="ScreenShot/adminPanel.png"  width="250" height="200"/> 
 | Signup Screen | Change Password |
-|---------------|-----------------|
+|---------------|-----------------
 | <img src="ScreenShot/signup.png"  width="250" height="200"/> |<img src="ScreenShot/changePassword.png"  width="250" height="200"/> |
 
 
