@@ -24,7 +24,7 @@
 
 | Signup Screen | Admin Screen | Change Password |
 |---------------|--------------|-----------------|
-| <img src="ScreenShot/signup.png" width="250" height="150"/> | <img src="ScreenShot/adminPanel.png" width="250" height="150"/> | <img src="ScreenShot/changePassword.png" width="250"/> |
+| <img src="ScreenShot/signup.png" width="250" height="150"/> | <img src="ScreenShot/adminPanel.png" width="250" height="200"/> | <img src="ScreenShot/changePassword.png" width="250"/> |
 
 ---
 ## 🚀 Features
