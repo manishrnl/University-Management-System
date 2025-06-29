@@ -18,11 +18,11 @@
 
 ## 🖼️ Preview
 
-| Login Screen                                      | Signup Screen                       | Change Password Screen                            |
+| Login Screen                                      |  Forget Password Screen                       | Change Password Screen                            |
 |---------------------------------------------------|-------------------------------------|---------------------------------------------------|
-| ![Login](ScreenShot/login.png)                    | ![Signup](ScreenShot/signup.png)    | ![Change Password](ScreenShot/changePassword.png) |
-| Forget Password Screen                            | Admin Screen                        | Change Password                                   |
-| ![Forget Password](ScreenShot/forgetPassword.png) | ![Admin](ScreenShot/adminPanel.png) | ![Change Password](ScreenShot/changePassword.png) 
+| ![Login](ScreenShot/login.png)                    |  ![Forget Password](ScreenShot/forgetPassword.png)  | ![Change Password](ScreenShot/changePassword.png) |
+| Signup Screen                           | Admin Screen                        | Change Password                                   |
+| ![Signup](ScreenShot/signup.png)  | ![Admin](ScreenShot/adminPanel.png) | ![Change Password](ScreenShot/changePassword.png) 
 
 
 ---
